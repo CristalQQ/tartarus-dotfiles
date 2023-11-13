@@ -1,0 +1,30 @@
+Чтобы поставить русскую раскладку клавиатуры: 
+Узнать модель: setxkbmap -query
+localectl set-x11-keymap --no-convert us,ru pc105 "" grp:alt_shift_toggle
+
+
+Pacman: git lightdm firefox fish starship kitty picom rofi neofetch nitrogen gtk2 gtk3 1xappearance maim xclip timeshift thunar vim vscode light xdg-user-dirs pavucontrol
+yay: lightdm-mini-greeter spotify nekoray
+
+
+Установка yay:
+1) git clone https://aur.archlinux.org/paru.git
+2) makepkg -si
+
+
+Установка AwesomeWM:
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/awesome-git.git
+cd awesome-git
+makepkg -fsri
+
+
+Установить по умолчанию скринлок:
+systemctl enable lightdm
+
+
+fish поумолчанию 
+chsh -s /usr/bin/fish
+
+Добавить пользователя в light:
+sudo usermod -aG video cristal
