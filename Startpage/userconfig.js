@@ -2,8 +2,8 @@ let saved_config = JSON.parse(localStorage.getItem("CONFIG"));
 
 const default_config = {
   crypto: {
-    coin: 'ETH',
-    currency: 'USD',
+    coin: 'USD',
+    currency: 'RUB',
     refreshIn: 10
   },
   overrideStorage: true,
@@ -40,10 +40,16 @@ const default_config = {
         name: "Social Media",
         links: [
           {
-            name: "whatsapp",
-            url: "https://web.whatsapp.com/",
-            icon: "brand-whatsapp",
-            icon_color: "#a9b665",
+            name: "youtube",
+            url: "https://www.youtube.com/",
+            icon: "brand-youtube-filled",
+            icon_color: "#ea6962",
+          },
+          {
+            name: "twitch",
+            url: "https://www.twitch.tv/",
+            icon: "brand-twitch",
+            icon_color: "#d3869b",
           },
           {
             name: "twitter",
@@ -57,27 +63,21 @@ const default_config = {
             icon: "brand-reddit",
             icon_color: "#e78a4e",
           },
-          {
-            name: "youtube",
-            url: "https://www.youtube.com/",
-            icon: "brand-youtube-filled",
-            icon_color: "#ea6962",
-          },
-          {
-            name: "twitch",
-            url: "https://www.twitch.tv/",
-            icon: "brand-twitch",
-            icon_color: "#d3869b",
-          },
         ],
       }, {
         name: "Games",
         links: [
           {
-            name: "chess",
-            url: "https://www.chess.com/home",
-            icon: "chess-queen-filled",
-            icon_color: "#a9b665",
+            name: "gmail",
+            url: "https://mail.google.com/mail/u/0/",
+            icon: "brand-gmail",
+            icon_color: "#ea6962",
+          },
+          {
+            name: "github",
+            url: "https://github.com/",
+            icon: "brand-github",
+            icon_color: "#7daea3",
           },
           {
             name: "monkeytype",
@@ -85,26 +85,14 @@ const default_config = {
             icon: "keyboard",
             icon_color: "#e78a4e",
           },
-          {
-            name: "tetris",
-            url: "https://tetris.com/",
-            icon: "brand-apple-arcade",
-            icon_color: "#ea6962",
-          },
         ],
       }, {
         name: "Video",
         links: [
           {
-            name: "disney+",
-            url: "https://www.disneyplus.com/home",
-            icon: "brand-disney",
-            icon_color: "#7daea3",
-          },
-          {
-            name: "primevideo",
-            url: "https://www.primevideo.com/region/eu/?ref_=dv_web_unknown",
-            icon: "brand-amazon",
+            name: "lampa",
+            url: "https://lampa.mx/",
+            icon: "movie",
             icon_color: "#7daea3",
           },
         ],
