@@ -269,9 +269,9 @@ local dashboardPanel = function(s)
             shape = rounded_shape,
             widget = wibox.container.background
         },
-        right = -200,
+        right = -350,
         widget = wibox.container.margin
-    }, 4, 2, 1, 4)
+    }, 4, 2, 1, 3)
 
     distribution:add_widget_at({
         {
@@ -288,7 +288,7 @@ local dashboardPanel = function(s)
                 nil,
                 layout = wibox.layout.align.horizontal
             },
-            margins = 30,
+            margins = 20,
             widget = wibox.container.margin
         },
         bg = beautiful.system_black_dark,
