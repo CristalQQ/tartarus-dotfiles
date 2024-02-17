@@ -3,8 +3,8 @@
 localectl set-x11-keymap --no-convert us,ru pc105 "" grp:alt_shift_toggle
 
 
-Pacman: git lightdm firefox fish starship kitty picom rofi neofetch nitrogen gtk2 gtk3 1xappearance maim xclip timeshift thunar vim vscode light xdg-user-dirs pavucontrol
-yay: lightdm-mini-greeter spotify spicetify nekoray(sing-geosite sing-geoip)
+Pacman: git lightdm firefox fish starship kitty discord picom rofi neofetch nitrogen gtk2 gtk3 1xappearance maim xclip timeshift thunar vim vscode xdg-user-dirs pavucontrol
+yay: lightdm-mini-greeter light spotify nekoray sing-geosite sing-geoip
 
 
 Установка yay:
@@ -28,3 +28,17 @@ chsh -s /usr/bin/fish
 
 Добавить пользователя в light:
 sudo usermod -aG video cristal
+
+
+Spicetify:
+yay -S spicetify-cli
+sudo chmod a+wr /opt/spotify
+sudo chmod a+wr /opt/spotify/Apps -R
+
+spicetify
+spicetify backup apply enable-devtools
+
+cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
+spicetify config current_theme Dribbblish color_scheme gruvbox
+spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
+spicetify apply
