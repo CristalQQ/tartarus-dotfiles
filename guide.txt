@@ -30,6 +30,10 @@ chsh -s /usr/bin/fish
 sudo usermod -aG video cristal
 
 
+Nekoray tun:
+sudo setcap cap_net_admin=ep /usr/lib/nekoray/nekobox_core
+
+
 Spicetify:
 yay -S spicetify-cli
 sudo chmod a+wr /opt/spotify
