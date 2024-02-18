@@ -38,12 +38,12 @@ return {
   rofi_appmenu = "sh /home/cristal/.config/rofi/launchers/colorful/launcher.sh",
   -- Rofi powermenu
   rofi_powermenu = "sh /home/cristal/.config/rofi/applets/menu/powermenu.sh",
-  -- Discord
+  -- Telegram
   telegram_desktop = "telegram-desktop",
-  -- Discord
+  -- Steam
   steam = "steam",
-  -- Discord
-  nekoray = "nekoray -many",
+  -- Nekoray
+  nekoray = "nekoray",
   -- Discord
   discord = "discord"
  },
