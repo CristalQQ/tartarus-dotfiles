@@ -273,6 +273,51 @@ local dashboardPanel = function(s)
         widget = wibox.container.margin
     }, 4, 2, 1, 3)
 
+    distribution:add_widget_at(wibox.widget {
+        {
+            {
+                application(beautiful.lampa_icon, function()
+                    awful.spawn(apps.default.lampa)
+                end),
+                application(beautiful.qbittorrent_icon, function()
+                    awful.spawn(apps.default.qbittorrent)
+                end),
+                application(beautiful.multimc_icon, function()
+                    awful.spawn(apps.default.multimc)
+                end),
+                application(beautiful.obsidian_icon, function()
+                    awful.spawn(apps.default.obsidian)
+                end),
+                layout = wibox.layout.ratio.horizontal
+            },
+            bg = beautiful.system_black_dark,
+            shape_border_width = beautiful.border_width,
+            shape_border_color = beautiful.system_yellow_dark,
+            shape = rounded_shape,
+            widget = wibox.container.background
+        },
+        right = -12,
+        widget = wibox.container.margin
+    }, 3, 4, 1, 4)
+
+    distribution:add_widget_at(wibox.widget {
+        {
+            {
+                application(beautiful.bluetooth_manager_icon, function()
+                    awful.spawn(apps.default.bluetooth_manager)
+                end),
+                layout = wibox.layout.flex.vertical
+            },
+            bg = beautiful.system_black_dark,
+            shape_border_width = beautiful.border_width,
+            shape_border_color = beautiful.system_yellow_dark,
+            shape = rounded_shape,
+            widget = wibox.container.background
+        },
+        right = -10,
+        widget = wibox.container.margin
+    }, 2, 6, 1, 1)
+
     distribution:add_widget_at({
         {
             {

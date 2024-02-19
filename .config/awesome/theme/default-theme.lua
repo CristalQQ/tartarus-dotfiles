@@ -140,7 +140,11 @@ local awesome_overrides = function(theme)
     theme.telegram_icon = theme.icons .. "telegram.svg"
     theme.steam_icon = theme.icons .. "steam.svg"
     theme.nekoray_icon = theme.icons .. "nekoray.svg"
-
+    theme.bluetooth_manager_icon = theme.icons .. "bluetooth.svg"
+    theme.qbittorrent_icon = theme.icons .. "qbittorrent.svg"
+    theme.multimc_icon = theme.icons .. "minecraft.svg"
+    theme.obsidian_icon = theme.icons .. "obsidian.svg"
+    theme.lampa_icon = theme.icons .. "lampa.svg"
 
     -- UI Groups
     theme.groups_title_bg = '#d4be98' .. '15'

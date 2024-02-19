@@ -42,8 +42,13 @@ return {
   telegram_desktop = "telegram-desktop",
   -- Steam
   steam = "steam",
-  -- Nekoray
+  -- nekoray
   nekoray = "nekoray",
+  lampa = "lampa",
+  qbittorrent = "qbittorrent",
+  multimc = "multimc",
+  obsidian = "obsidian",
+
   -- Discord
   discord = "discord"
  },

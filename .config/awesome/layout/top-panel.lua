@@ -116,12 +116,12 @@ local TopPanel = function(s)
         },
         {
             resourcesInfo,
-            left = 15,
+            left = 9,
             widget = wibox.container.margin
         },
         layout = wibox.layout.ratio.horizontal
     }
-    distribution:ajust_ratio(2, 0.04, 0.90, 0)
+    distribution:ajust_ratio(2, 0.09, 0.91, 0.0)
 
     local mainLayer = wibox.widget {
         wibox.widget {
