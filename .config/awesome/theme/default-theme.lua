@@ -145,6 +145,7 @@ local awesome_overrides = function(theme)
     theme.multimc_icon = theme.icons .. "minecraft.svg"
     theme.obsidian_icon = theme.icons .. "obsidian.svg"
     theme.lampa_icon = theme.icons .. "lampa.svg"
+    theme.volume_manager_icon = theme.icons .. "audio.svg"
 
     -- UI Groups
     theme.groups_title_bg = '#d4be98' .. '15'

@@ -303,10 +303,10 @@ local dashboardPanel = function(s)
     distribution:add_widget_at(wibox.widget {
         {
             {
-                application(beautiful.bluetooth_manager_icon, function()
-                    awful.spawn(apps.default.bluetooth_manager)
+                application(beautiful.volume_manager_icon, function()
+                    awful.spawn(apps.default.volume_manager)
                 end),
-                layout = wibox.layout.flex.vertical
+                layout = wibox.layout.flex.horizontal
             },
             bg = beautiful.system_black_dark,
             shape_border_width = beautiful.border_width,
@@ -317,6 +317,25 @@ local dashboardPanel = function(s)
         right = -10,
         widget = wibox.container.margin
     }, 2, 6, 1, 1)
+
+    distribution:add_widget_at(wibox.widget {
+        {
+            {
+                application(beautiful.bluetooth_manager_icon, function()
+                    awful.spawn(apps.default.bluetooth_manager)
+                end),
+                layout = wibox.layout.flex.horizontal
+            },
+            bg = beautiful.system_black_dark,
+            shape_border_width = beautiful.border_width,
+            shape_border_color = beautiful.system_yellow_dark,
+            shape = rounded_shape,
+            widget = wibox.container.background
+        },
+        right = -10,
+        widget = wibox.container.margin
+    }, 1, 6, 1, 1)
+
 
     distribution:add_widget_at({
         {
