@@ -152,6 +152,18 @@ ruled.client.connect_signal(
 		}
 
 		ruled.client.append_rule {
+			id = 'nekoray',
+			rule_any = {
+				class = {
+					'nekoray'
+				}
+			},
+			properties = {
+				tag = '6'
+			}
+		}
+
+		ruled.client.append_rule {
 			id = 'internet',
 			rule_any = {
 				class = {
