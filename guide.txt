@@ -1,40 +1,79 @@
-Чтобы поставить русскую раскладку клавиатуры: 
-Узнать модель: setxkbmap -query
-localectl set-x11-keymap --no-convert us,ru pc105 "" grp:alt_shift_toggle
+1) sudo pacman -S git lightdm firefox fish starship kitty picom rofi neofetch nitrogen gtk2 gtk3 1xappearance maim xclip timeshift thunar vim vscode xdg-user-dirs pavucontrol discord obsidian qbittorrent lampa
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+2) Установка yay:
+ git clone https://aur.archlinux.org/paru.git
+ cd paru
+ makepkg -si
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Pacman: git lightdm firefox fish starship kitty discord picom rofi neofetch nitrogen gtk2 gtk3 1xappearance maim xclip timeshift thunar vim vscode xdg-user-dirs pavucontrol
-yay: lightdm-mini-greeter light spotify nekoray sing-geosite sing-geoip
+3) yay -S lightdm-mini-greeter light spotify nekoray sing-geosite sing-geoip
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+4) git clone https://github.com/CristalQQ/tartarus-dotfiles
+cd tartarus-dotfiles
+cp -R ./. ~/
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Установка yay:
-1) git clone https://aur.archlinux.org/paru.git
-2) makepkg -si
-
-
-Установка AwesomeWM:
+5) Установка AwesomeWM:
 sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/awesome-git.git
 cd awesome-git
 makepkg -fsri
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-Установить по умолчанию скринлок:
+6) Установить по умолчанию скринлок:
+sudo cp -R ~/LightDM-Mini_Greeter/. /etc/lightdm
 systemctl enable lightdm
+sudo chmod +x /etc/lightdm/display_setup.sh
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-fish поумолчанию 
+7) fish поумолчанию:
 chsh -s /usr/bin/fish
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Добавить пользователя в light:
+8) Русифицировать систему:
+Отредактируйте файл /etc/locale.gen, раскомментировав строку ru_RU.UTF-8 UTF-8
+sudo locale-gen
+localectl set-locale ru_RU.UTF-8
+
+Чтобы поставить русскую раскладку клавиатуры: 
+Узнать модель: setxkbmap -query
+localectl set-x11-keymap --no-convert us,ru pc105 "" grp:alt_shift_toggle
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+9) Установить драйвера Nvidia:
+sudo pacman -Syu --noconfirm
+sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings opencl-nvidia xorg-server-devel
+
+sudo vim /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
+
+Section "OutputClass"
+    Identifier "intel"
+    MatchDriver "i915"
+    Driver "modesetting"
+EndSection
+
+Section "OutputClass"
+    Identifier "nvidia"
+    MatchDriver "nvidia-drm"
+    Driver "nvidia"
+    Option "AllowEmptyInitialConfiguration"
+    Option "PrimaryGPU" "yes"
+    ModulePath "/usr/lib/nvidia/xorg"
+    ModulePath "/usr/lib/xorg/modules"
+EndSection
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10) Добавить пользователя в light:
 sudo usermod -aG video cristal
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-Nekoray tun:
+11) Nekoray tun:
 sudo setcap cap_net_admin=ep /usr/lib/nekoray/nekobox_core
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-Spicetify:
+12) Spicetify:
 yay -S spicetify-cli
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
@@ -46,3 +85,26 @@ cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
 spicetify config current_theme Dribbblish color_scheme gruvbox
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
 spicetify apply
+
+git clone https://gist.github.com/fa6258f3ff7b17747ee3.git
+cd ./fa6258f3ff7b17747ee3 
+chmod +x sp
+sudo cp ./sp /usr/local/bin/
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13) SSH:
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/*
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+14) GRUB:
+cd Grub
+sudo cp tartarus -r /usr/share/grub/themes/
+sudo vim /etc/default/grub
+
+GRUB_THEME="/usr/share/grub/themes/tartarus/theme.txt"
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+sudo pacman -S grub-customizer
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
