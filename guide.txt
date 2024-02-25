@@ -108,3 +108,15 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 sudo pacman -S grub-customizer
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+15) Браузер по-умолчанию:
+vim ~/.config/mimeapps.list
+[Default Applications]
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+16) Установка VS Code:
+git clone https://aur.archlinux.org/visual-studio-code-bin.git
+cd cd visual-studio-code-bin
+makepkg -si
