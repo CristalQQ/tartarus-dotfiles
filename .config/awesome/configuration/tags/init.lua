@@ -61,7 +61,7 @@ screen.connect_signal(
 				{
 					icon = tag.icon,
 					icon_only = true,
-					layout = tag.layout or awful.layout.suit.spiral.dwindle,
+					layout = tag.layout or awful.layout.suit.tile,
 					gap_single_client = true,
 					gap = beautiful.useless_gap,
 					screen = s,

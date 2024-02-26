@@ -249,6 +249,9 @@ local dashboardPanel = function(s)
                 application(beautiful.telegram_icon, function()
                     awful.spawn(apps.default.telegram_desktop)
                 end),
+                application(beautiful.chrome_icon, function()
+                    awful.spawn(apps.default.web_browser)
+                end),
                 application(beautiful.steam_icon, function()
                     awful.spawn(apps.default.steam)
                 end),
@@ -269,9 +272,9 @@ local dashboardPanel = function(s)
             shape = rounded_shape,
             widget = wibox.container.background
         },
-        right = -350,
+        right = -400,
         widget = wibox.container.margin
-    }, 4, 2, 1, 3)
+    }, 4, 2, 1, 4)
 
     distribution:add_widget_at(wibox.widget {
         {
@@ -296,7 +299,7 @@ local dashboardPanel = function(s)
             shape = rounded_shape,
             widget = wibox.container.background
         },
-        right = -12,
+        right = -100,
         widget = wibox.container.margin
     }, 3, 4, 1, 4)
 

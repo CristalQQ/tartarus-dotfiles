@@ -18,7 +18,7 @@ return {
   -- Terminal emulator
   terminal = "kitty",
   -- Web browser
-  web_browser = "firefox",
+  web_browser = "google-chrome-stable",
   -- Music Player
   music_player = "spotify",
   -- Text editor
@@ -48,7 +48,6 @@ return {
   qbittorrent = "qbittorrent",
   multimc = "multimc",
   obsidian = "obsidian",
-
   -- Discord
   discord = "discord"
  },

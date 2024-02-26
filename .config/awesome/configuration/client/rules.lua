@@ -164,6 +164,30 @@ ruled.client.connect_signal(
 		}
 
 		ruled.client.append_rule {
+			id = 'qbittorrent',
+			rule_any = {
+				class = {
+					'qbittorrent'
+				}
+			},
+			properties = {
+				tag = '6'
+			}
+		}
+
+		ruled.client.append_rule {
+			id = 'internet',
+			rule_any = {
+				class = {
+					'chrome'
+				}
+			},
+			properties = {
+				tag = '3'
+			}
+		}
+
+		ruled.client.append_rule {
 			id = 'internet',
 			rule_any = {
 				class = {
