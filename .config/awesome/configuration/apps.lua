@@ -54,6 +54,7 @@ return {
  -- list of apps to start on start-up
  run_on_start_up = {
   -- Manage Screens
+  "redshift",
   -- "autorandr --load laptop",
   "autorandr --change",
   -- Compositor

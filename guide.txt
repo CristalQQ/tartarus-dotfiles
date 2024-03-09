@@ -1,4 +1,4 @@
-1) sudo pacman -S git lightdm firefox fish starship kitty picom rofi neofetch nitrogen gtk2 gtk3 1xappearance maim xclip timeshift thunar neovim vscode xdg-user-dirs pavucontrol discord obsidian qbittorrent lampa
+1) sudo pacman -S git lightdm firefox fish starship kitty picom rofi neofetch nitrogen gtk2 gtk3 1xappearance maim xclip timeshift thunar neovim vscode xdg-user-dirs pavucontrol discord obsidian qbittorrent redshift lampa
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2) Установка yay:
@@ -120,3 +120,4 @@ x-scheme-handler/https=google-chrome.desktop
 git clone https://aur.archlinux.org/visual-studio-code-bin.git
 cd cd visual-studio-code-bin
 makepkg -si
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
