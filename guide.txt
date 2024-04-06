@@ -1,4 +1,4 @@
-1) sudo pacman -S git lightdm firefox fish starship kitty picom rofi neofetch nitrogen gtk2 gtk3 1xappearance maim xclip timeshift thunar neovim vscode xdg-user-dirs pavucontrol discord obsidian qbittorrent redshift lampa
+1) sudo pacman -S git lightdm exa firefox fish starship kitty picom rofi neofetch nitrogen gtk2 gtk3 1xappearance maim xclip timeshift thunar neovim vscode xdg-user-dirs pavucontrol discord obsidian qbittorrent redshift lampa
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2) Установка yay:
