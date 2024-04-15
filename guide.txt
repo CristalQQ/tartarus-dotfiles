@@ -121,3 +121,7 @@ git clone https://aur.archlinux.org/visual-studio-code-bin.git
 cd cd visual-studio-code-bin
 makepkg -si
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+17) Решение проблем со звуком:
+sudo nvim /etc/modprobe.d/alsa-base.conf
+options snd_hda_intel index=0
+
