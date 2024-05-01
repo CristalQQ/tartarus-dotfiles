@@ -76,6 +76,7 @@ sudo setcap cap_net_admin=ep /usr/lib/nekoray/nekobox_core
 Работала тема и курсор от root:
 sudo cp -R .local/share/icons/. /usr/share/icons/
 sudo cp -R .local/share/themes/. /usr/share/themes/
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 12) Spicetify:
 yay -S spicetify-cli
