@@ -7,7 +7,7 @@
  makepkg -si
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-3) yay -S lightdm-mini-greeter light spotify nekoray sing-geosite-common-git sing-geoip-common-git
+3) yay -S lightdm-mini-greeter light spotify nekoray sing-geosite-db-git sing-geoip-db-git
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 4) git clone https://github.com/CristalQQ/tartarus-dotfiles
